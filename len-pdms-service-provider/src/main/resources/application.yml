@@ -1,8 +1,11 @@
 server:
-  port: 8082
+  port: 8081
+embedded:
+  zookeeper:
+    port: 2181
 spring:
   application:
-    name: pdms-consumer
+      name: pdms-provider
   devtools:
       restart:
         enabled: true
