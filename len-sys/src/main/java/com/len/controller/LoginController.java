@@ -44,8 +44,12 @@ public class LoginController {
         return loginCheck();
     }
 
-    @GetMapping(value = "goLogin")
-    public String goLogin(Model model) {
+    @GetMapping(value = "/goLogin")
+    public String goLogin(Model model,String username,String password) {
+        model.addAttribute("name",username);
+        model.addAttribute("pwd",password);
+        System.out.println(username);
+        System.out.println(password);
         Subject sub = SecurityUtils.getSubject();
         if (sub.isAuthenticated()) {
             return "/main/main";

@@ -135,6 +135,7 @@ public class ShiroConfig {
         Map<String, String> filterMap = new LinkedHashMap<>();
         filterMap.put("/login", "verCode,anon");
         filterMap.put("/pdms/tenant/**", "anon");//租户请求不拦截
+        filterMap.put("/goLogin", "anon");//租户请求goLogin不拦截
         filterMap.put("/blogLogin", "verCode,anon");
         filterMap.put("/getCode", "anon");
         filterMap.put("/actuator/**", "anon");

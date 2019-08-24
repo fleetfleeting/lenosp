@@ -22,10 +22,12 @@
     <div class="message">项目研发管理平台</div>
     <div id="darkbannerwrap"></div>
 
+
     <form method="post" action="${re.contextPath}/login" class="layui-form" >
-        <input name="username" placeholder="用户名" autocomplete="off"  type="text" lay-verify="username" class="layui-input" >
+        <input name="username" placeholder="用户名"  value="${name}" autocomplete="off"  type="text" lay-verify="username" class="layui-input" >
+
         <hr class="hr15">
-        <input name="password" lay-verify="password" placeholder="密码" autocomplete="off"  type="password" class="layui-input">
+        <input name="password" lay-verify="password" value="${pwd}" placeholder="密码" autocomplete="off"  type="password" class="layui-input">
         <hr class="hr15">
         <div  class="layui-inline">
             <label class="layui-form-label" style="width:40px;padding: 9px 0px;">验证码&nbsp;</label>
@@ -43,11 +45,10 @@
         <#--</div>-->
         <hr class="hr15">
         <input value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit">
+        <a href="${re.contextPath}/pdms/tenant/register">注册</a>
         <hr class="hr20" >
     </form>
 </div>
-
-
 <script>
   var layer;
   $(function  () {

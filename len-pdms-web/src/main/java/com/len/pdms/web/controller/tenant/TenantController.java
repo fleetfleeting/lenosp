@@ -18,16 +18,17 @@ public class TenantController {
 
     @GetMapping(value="/register")
     public String register(){
-        System.out.println("sajsjahshajHSAS");
-        return "/tenant-register";
+        System.out.println("注册页面跳转页");
+        return "/pdms/tenant-register";
     }
     //添加用户
     @PostMapping("/addTenant")
-    public String addTenant(TenantVo tenantVo){
-        System.out.println(tenantVo);
-        System.out.println(tenantService);
+    public String addTenant(TenantVo tenantVo ,Model model){
+        System.out.println("注册页面正式面");
         tenantService.addTenant(tenantVo);
-        return "/tenant-register-success";
+        model.addAttribute("username",tenantVo.getUsername());
+        model.addAttribute("password",tenantVo.getPassword());
+        return "/pdms/tenant-register-success";
     }
 
 }

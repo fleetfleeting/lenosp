@@ -24,8 +24,11 @@
     <div class="layui-hide-xs">
 
     </div>
+
     <ul class="layui-nav layui-layout-right kit-nav">
-      <li class="layui-nav-item">
+        <li class="layui-nav-item"><a href="main.ftl"> 项目列表</a></li>
+
+        <li class="layui-nav-item">
         <a href="javascript:;">
           <i class="layui-icon">&#xe63f;</i> 皮肤</a>
         </a>

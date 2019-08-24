@@ -23,8 +23,7 @@
         <legend>注册结果</legend>
     </fieldset>
 
-    <blockquote class="layui-elem-quote">租户注册成功<a href="/goLogin" id="login" type="button" class="layui-btn layui-btn-lg" style="margin-left: 15px;">立即登录</a></blockquote>
-
+    <blockquote class="layui-elem-quote">租户注册成功<a href="/goLogin?username=${username}&password=${password}" id="login" type="button" class="layui-btn layui-btn-lg" style="margin-left: 15px;">立即登录</a></blockquote>
 </div>
 
 
